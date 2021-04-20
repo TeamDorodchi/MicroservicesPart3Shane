@@ -228,7 +228,7 @@ function toShoppingCart(){
 
     if( email !='' ) {
         sessionStorage.setItem('email', email); //setItem 'email' in sessionStorage to be the user's email. You can access sessionStorage by sessionStorage.getItem().
-        window.location.href = './cart.html'; //redirect to the shopping cart page
+        window.location.href = 'cart.html'; //redirect to the shopping cart page
     } 
     else {
         alert("Please enter your email at top of page."); //alert user since email is empty
