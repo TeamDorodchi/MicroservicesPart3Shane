@@ -50,14 +50,43 @@ function getCart($email) {
 }
 
 function deleteItem($id) {
-
+    let email =$.trim($('#email').val()); //gets the user's email
     //TODO complete implementation using the product id
-    alert("cart.js/deleteItem() is not implemented")
+    
+    $.ajax({
+        url: Url + 'Cart/'+$id,
+        type: 'delete',
+        dataType: 'json',
+        contentType: 'text/plain',
+        success: function (data) {
+            getCart(email);
+        alert("Item successfully deleted.");
+
+        },
+        error: function (data) {
+            alert("Error while fetching data.");
+        }
+    });
 }
 
 function checkOut() {
-
+   
     //TODO complete implementation
-    alert("cart.js/checkOut() is not implemented")
+    $.ajax({
+        url: Url + 'Cart/',
+        type: 'put',
+        dataType: 'json',
+        contentType: 'text/plain',
+        data: JSON.stringify({"email":email}),
+        success: function (data) {
+            let message = "Thanks for shopping with us!";
+            $('#cart-list').html(message);
+            $('#checkout').html("approved");
+            alert("Item successfully checked out.");
 
+        },
+        error: function (data) {
+            alert("Error while fetching data.");
+        }
+    });
 }
