@@ -54,9 +54,19 @@
                     <i class="fas fa-search h4 text-body"></i>
                 </div>
                 <!--end of col-->
-                <div class="col search-item-down">
-                    <input class="form-control form-control-lg form-control-borderless" type="search"
-                           placeholder="Operating system" id="operating_system">
+                <div class="dropdown">
+                    <select name="operating_system" id="operating_system">
+                        <option value="android">Android</option>
+                        <option value="blackberry">BlackBerry</option>
+                        <option value="BlackBerry 10">BlackBerry 10</option>
+                        <option value="BlackBerry 10.3.1">BlackBerry 10.3.1</option>
+                        <option value="ios">iOS</option>
+                        <option value="nokia_symbian">Nokia Symbian</option>
+                        <option value="Palm OS">Palm OS</option>
+                        <option value="Symbian Series40">Symbian Series40</option>
+                        <option value="windows_mobile">Windows Mobile</option>
+                        <option value="">Other</option>
+                    </select>
                 </div>
                 <div class="col search-item-down">
                     <input class="form-control form-control-lg form-control-borderless" type="number"
@@ -66,6 +76,8 @@
                     <input class="form-control form-control-lg form-control-borderless" type="number"
                            placeholder="Max Price" id="max_price">
                 </div>
+
+
                 <!--end of col-->
             </div>
         </div>

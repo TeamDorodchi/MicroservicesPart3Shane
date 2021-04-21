@@ -7,11 +7,14 @@ function fetchProductList() {
     var productList;
     var productListAdd;
 
+   
     !($.trim($('#title').val()) == '') ? item ["title"] = $('#title').val(): '';
     !($.trim($('#operating_system').val()) == '') ? item ["operating_system"] = $('#operating_system').val(): '';
     !($.trim($('#min_price').val()) == '') ? item ["price_from"] = $('#min_price').val(): '';
     !($.trim($('#max_price').val()) == '') ? item ["price_to"] = $('#max_price').val(): '';
+   
 
+    
     jsonObj.push(item);
 
     //jQuery Ajax request
@@ -64,6 +67,7 @@ function fetchProductList() {
 
 function fetchOneProduct($id) {
     var product;
+    
 
     //jQuery Ajax request
     $.ajax({
